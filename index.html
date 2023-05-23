@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <title>Web Scrapping</title>
 </head>
 <body>
@@ -16,12 +18,25 @@
             </svg>
             <span class="ml-3 text-xl">Web Scrapping</span>
           </a>
-          <nav class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center">
+          <!-- <nav class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center">
             <a class="mr-5 hover:text-gray-900" href="#">Home</a>
             <a class="mr-5 hover:text-gray-900" href="about.html">About</a>
             <a class="mr-5 hover:text-gray-900" href="services.html">Services</a>
             <a class="mr-5 hover:text-gray-900" href="contact.html">Contact</a>
+          </nav> -->
+          <nav class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400 flex flex-wrap items-center text-base justify-center">
+            <a class="mr-5 hover:text-gray-900" href="#">Home</a>
+            <a class="mr-5 hover:text-gray-900" href="about.html">About</a>
+            <div class="dropdown inline-block relative">
+              <a class="mr-5 hover:text-gray-900" href="services.html">Services</a>
+              <ul class="dropdown-menu absolute hidden text-gray-700 pt-1">
+                <li><a class="rounded-t bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="webscrapping.html">Web Scrapping Data Provider</a></li>
+                <li><a class="rounded-b bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="powerbi.html">Power BI Consulting</a></li>
+              </ul>
+            </div>
+            <a class="mr-5 hover:text-gray-900" href="contact.html">Contact</a>
           </nav>
+          
           <button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">WhatsApp Now!
             <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
               <path d="M5 12h14M12 5l7 7-7 7"></path>
