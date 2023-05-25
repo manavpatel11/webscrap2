@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
+    <script src="script.js"></script>
     <title>Contact</title>
 </head>
 <body>
@@ -27,7 +28,14 @@
             </div>
             <a class="mr-5 hover:text-gray-900" href="#" style="font-weight: bold;">Contact</a>
           </nav>
-          <button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">WhatsApp Now!
+          <!-- <button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">WhatsApp Now!
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+              <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+          </button> -->
+          <button id="dark-mode-toggle" class="inline-flex text-white items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">
+            <input type="checkbox" id="dark-mode-checkbox" onchange="toggleDarkMode()" style="display: none;">
+            <label for="dark-mode-checkbox" id="dark-mode-label">Switch Theme</label>
             <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
               <path d="M5 12h14M12 5l7 7-7 7"></path>
             </svg>
@@ -216,5 +224,26 @@
           </div>
         </div>
       </footer>
+      <script>
+        // Check if dark mode preference is already set
+        var isDarkMode = localStorage.getItem('darkMode');
+        if (isDarkMode === 'true') {
+          document.body.classList.add('dark-mode');
+        }
+      
+        // Function to toggle dark mode
+        function toggleDarkMode() {
+          var body = document.body;
+          body.classList.toggle('dark-mode');
+      
+          // Store the dark mode preference
+          var isDarkMode = body.classList.contains('dark-mode');
+          localStorage.setItem('darkMode', isDarkMode);
+        }
+      
+        // Add event listener to the dark mode toggle button
+        var darkModeToggle = document.getElementById('dark-mode-toggle');
+        darkModeToggle.addEventListener('click', toggleDarkMode);
+      </script>
 </body>
 </html>

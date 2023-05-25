@@ -1,3 +1,32 @@
 .dropdown:hover .dropdown-menu {
     display: block;
 }
+
+body {
+    background-color: #f0f0f0;
+    color: #333;
+
+}
+
+.dark-mode {
+    background-color: black;
+    color: #f0f0f0;
+}
+
+  /* Additional CSS styles for dark mode */
+/* .dark-mode .text-gray-600 {
+    color: #ccc;
+} */
+.dark-mode .text-gray-900 {
+    color: white;
+}
+
+.dark-mode .bg-gray-100 {
+    background: #212121;
+    color: white;
+}
+
+.dark-mode .bg-white {
+    background: #212121;
+    /* color: white; */
+}
